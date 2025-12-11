@@ -1,18 +1,25 @@
 [green_agent]
-image = "ghcr.io/yourorg/your-green-agent:version"
-env = { API_KEY = "${GITHUB_SECRET_NAME}", LOG_LEVEL = "INFO" }
+image = "ghcr.io/datalayer-challenges/agentify-dab-step-green:latest"
+env = { 
+    LLM_API_KEY = "${AZURE_API_KEY}", 
+    GREEN_AGENT_MODEL = "azure:gpt-4o",
+    AZURE_OPENAI_ENDPOINT = "${AZURE_OPENAI_ENDPOINT}",
+    AZURE_OPENAI_API_VERSION = "2024-06-01",
+    LOG_LEVEL = "INFO" 
+}
 
 [[participants]]
-agentbeats_id = ""
-name = "role_1_name"
-image = ""
-env = {}
-
-[[participants]]
-agentbeats_id = ""
-name = "role_2_name"
-image = ""
-env = {}
+agentbeats_id = "019b0e0f-d504-7c90-9990-9e3f8e746d4e"
+name = "DAB Data Analyst (Purple Agent)"
+image = "ghcr.io/datalayer-challenges/agentify-dab-step-purple:latest"
+env = { 
+    LLM_API_KEY = "${AZURE_API_KEY}",
+    PURPLE_AGENT_MODEL = "azure:gpt-4o", 
+    AZURE_OPENAI_ENDPOINT = "${AZURE_OPENAI_ENDPOINT}",
+    AZURE_OPENAI_API_VERSION = "2024-06-01",
+}
 
 [config]
-# Add your assessment config here
+num_tasks = 3
+quick_sample = true
+dataset_path = "data-dabench/"
