@@ -1,0 +1,14 @@
+[green_agent]
+image = "ghcr.io/datalayer-challenges/agentify-dabench-green:latest"
+env = { AZURE_OPENAI_API_KEY = "${AZURE_OPENAI_API_KEY}", AZURE_OPENAI_ENDPOINT = "${AZURE_OPENAI_ENDPOINT}", OPENAI_API_VERSION = "2024-06-01", LOG_LEVEL = "INFO", PURPLE_AGENT_MODEL = "bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0" }
+
+[[participants]]
+agentbeats_id = "019b0e0f-d504-7c90-9990-9e3f8e746d4e"
+name = "dabench-agent"
+image = "ghcr.io/datalayer-challenges/agentify-dabench-purple:latest"
+env = { PURPLE_AGENT_MODEL = "bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0", AWS_ACCESS_KEY_ID = "${AWS_ACCESS_KEY_ID}", AWS_SECRET_ACCESS_KEY = "${AWS_SECRET_ACCESS_KEY}", AWS_DEFAULT_REGION = "us-east-1" }
+
+[config]
+num_tasks = 2
+quick_sample = true
+dataset_path = "data-dabench/"
