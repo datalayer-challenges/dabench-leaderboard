@@ -1,12 +1,12 @@
 [green_agent]
 image = "ghcr.io/datalayer-challenges/agentify-dabench-green:latest"
-env = { LLM_API_KEY = "${...}", GREEN_AGENT_MODEL = "...", PURPLE_AGENT_MODEL = "...", LOG_LEVEL = "INFO" }
+env = { OPENAI_API_KEY = "${...}", PURPLE_AGENT_MODEL = "...", LOG_LEVEL = "INFO" }
 
 [[participants]]
 agentbeats_id = "..."
 name = "..."
 image = "..."
-env = { LLM_API_KEY = "${...}", PURPLE_AGENT_MODEL = "..." }
+env = { OPENAI_API_KEY = "${...}", PURPLE_AGENT_MODEL = "..." }
 
 [config]
 num_tasks = 257
