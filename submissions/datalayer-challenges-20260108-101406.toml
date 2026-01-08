@@ -1,6 +1,6 @@
 [green_agent]
 image = "ghcr.io/datalayer-challenges/agentify-dabench-green:latest"
-env = { AZURE_OPENAI_API_KEY = "${AZURE_OPENAI_API_KEY}", AZURE_OPENAI_ENDPOINT = "${AZURE_OPENAI_ENDPOINT}", OPENAI_API_VERSION = "2024-06-01", LOG_LEVEL = "INFO", PURPLE_AGENT_MODEL = "azure:4o" }
+env = { AZURE_OPENAI_API_KEY = "${AZURE_OPENAI_API_KEY}", AZURE_OPENAI_ENDPOINT = "${AZURE_OPENAI_ENDPOINT}", OPENAI_API_VERSION = "2024-06-01", LOG_LEVEL = "INFO", PURPLE_AGENT_MODEL = "azure:gpt-4o" }
 
 [[participants]]
 agentbeats_id = "019b0e0f-d504-7c90-9990-9e3f8e746d4e"
